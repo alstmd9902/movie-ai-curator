@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <>
-      <div>시작점</div>
-    </>
-  );
+  return <div></div>;
 }
 
 export default App;
