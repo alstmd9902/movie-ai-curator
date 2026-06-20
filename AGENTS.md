@@ -32,7 +32,7 @@ pnpm dev / pnpm build / pnpm lint
 |-----------|----------------|
 | 새 페이지 파일 | `docs/pages.md`, `docs/progress.md` |
 | 새 폴더 생성 | `docs/structure.md`, `docs/progress.md` |
-| 새 패키지 설치 | `docs/stack.md` |
+| 새 패키지 설치/업데이트 | `docs/stack.md`, `pnpm-lock.yaml` |
 | 기능 완성 | `docs/progress.md` (미구현 → 완료) |
 | 기능 제거 | 관련 docs 항목 삭제 |
 | 라우터 등 미결 확정 | `docs/decision-log.md` |
