@@ -44,7 +44,27 @@ pnpm dev        # 개발 서버
 pnpm build      # 프로덕션 빌드
 pnpm lint       # ESLint
 pnpm preview    # 빌드 결과 미리보기
+pnpm install --frozen-lockfile  # lockfile 기준 재현 설치 검증
 ```
+
+## 의존성 관리
+
+기본 설치와 검증은 `pnpm install --frozen-lockfile`을 사용한다.
+이 명령은 새 버전을 설치하지 않고, `package.json`과 `pnpm-lock.yaml`이 일치하는지 확인하며 lockfile에 기록된 버전 그대로 설치한다.
+
+AI 도구(Codex, Claude Code 등)는 임의로 패키지를 추가하거나 업데이트하지 않는다.
+패키지 추가/업데이트가 필요해 보이면 먼저 아래 내용을 확인해 사용자에게 보고하고, 승인 후 진행한다.
+
+| 확인 항목 | 기준 |
+|-----------|------|
+| 현재 버전 | `package.json`, `pnpm-lock.yaml` 기준 |
+| 최신 버전 | npm registry 또는 공식 문서 기준 |
+| 변경 내용 | 공식 changelog, release note, migration guide 기준 |
+| 영향 범위 | breaking change, 생성 코드 변경, 설정 변경, peer dependency 변화 |
+| 필요 여부 | 현재 문제 해결에 필요한지, 지금 업데이트하지 않아도 되는지 판단 |
+
+승인 전에는 `pnpm add`, `pnpm update`, `pnpm dlx <package>@latest`를 실행하지 않는다.
+승인 후 패키지 변경이 발생하면 `package.json`과 `pnpm-lock.yaml` 변경을 함께 커밋한다.
 
 ## 환경 변수
 

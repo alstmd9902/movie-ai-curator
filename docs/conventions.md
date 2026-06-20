@@ -6,7 +6,7 @@
 
 - 함수형 컴포넌트 + `export default`
 - props 타입은 컴포넌트 파일 내 `interface Props`로 정의
-- shadcn 컴포넌트 추가: `pnpm dlx shadcn@latest add <component>`
+- shadcn 컴포넌트 추가: `pnpm exec shadcn add <component>`
 - 특정 페이지에서만 쓰는 컴포넌트는 해당 페이지 파일 내에 유지 (조기 추출 금지)
 
 ## 스타일

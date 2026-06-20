@@ -61,9 +61,11 @@
 ## shadcn/ui
 
 - style: `base-nova` (`@base-ui/react` 기반)
-- 컴포넌트 추가: `pnpm dlx shadcn@latest add <component>`
+- 컴포넌트 추가: `pnpm exec shadcn add <component>`
 - 생성 위치: `src/components/ui/`
 - 생성된 파일 임의 수정 금지. 변경이 필요하면 shadcn 재설치 또는 래핑.
+- `pnpm exec shadcn`은 `package.json`과 `pnpm-lock.yaml`에 고정된 shadcn CLI 버전을 사용한다.
+- `pnpm dlx shadcn@latest ...`는 최신 CLI가 꼭 필요한 경우에만 사용하고, 사용 전 공식 changelog/release note를 확인해 변경점을 보고한 뒤 승인받는다.
 
 ## 컴포넌트 규칙
 
