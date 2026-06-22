@@ -31,10 +31,17 @@
 
 ---
 
+## 라우팅: React Router
+
+- **결정일**: 2026-06-22
+- **선택**: React Router v8 (`react-router`)
+- **이유**: React Router 최신 문서 기준으로 DOM API를 `react-router` 패키지에서 제공한다. `createBrowserRouter` + `RouterProvider` 구조를 사용해 라우트 객체를 React 렌더 트리 밖에서 한 번 만들고, 향후 route별 `loader`, `action`, `errorElement` 확장이 가능하게 한다.
+
+---
+
 ## 미결 사항 (결정 시 이 목록에서 위로 이동)
 
 | 항목 | 후보 | 비고 |
 |------|------|------|
-| 라우팅 | React Router (유력) vs TanStack Router | |
 | AI 연동 | Supabase Edge Function에서 OpenAI SDK 직접 호출 vs Vercel AI SDK | 클라이언트 직접 OpenAI 호출 금지. 스트리밍 필요 여부에 따라 결정 |
 | Supabase 도입 시점 | UI 프로토타입 이후 vs 초기 바로 연동 | |
