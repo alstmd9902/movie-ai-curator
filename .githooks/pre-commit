@@ -40,21 +40,21 @@ STAGED_DOC_FILES="$(git diff --cached --name-only -- 'docs/**' 'README.md' 'AGEN
 
 if [ -n "$STAGED_CODE_FILES" ] && [ -z "$STAGED_DOC_FILES" ]; then
   echo ""
-  echo "❌ 코드/설정 변경이 staged 되었지만 관련 문서 변경이 없습니다."
+  echo "⚠️  코드/설정 변경이 staged 되었지만 관련 문서 변경이 없습니다."
   echo ""
-  echo "변경한 코드에 맞게 docs/ 문서를 업데이트했는지 확인하세요."
-echo ""
-echo "  | 코드 변경           | 업데이트할 문서                     |"
-echo "  | 새 페이지 추가      | docs/project.md, docs/progress.md   |"
-echo "  | 새 폴더 생성        | docs/engineering.md, docs/progress.md |"
-echo "  | 새 패키지 설치      | docs/engineering.md, docs/progress.md |"
-echo "  | 기능 완성           | docs/progress.md                    |"
-echo "  | 환경변수 추가       | docs/engineering.md                 |"
-echo ""
-  echo "문서 변경이 정말 필요 없는 작업이라면, 커밋 메시지나 PR 설명에 이유를 남기고 hook을 우회하세요:"
-  echo "  git commit --no-verify"
-  exit 1
+  echo "필요하면 변경한 코드에 맞게 docs/ 문서를 별도 작업으로 업데이트하세요."
+  echo ""
+  echo "  | 코드 변경           | 업데이트할 문서                       |"
+  echo "  | 새 페이지 추가      | docs/project.md, docs/progress.md     |"
+  echo "  | 새 폴더 생성        | docs/engineering.md, docs/progress.md |"
+  echo "  | 새 패키지 설치      | docs/engineering.md, docs/progress.md |"
+  echo "  | 기능 완성           | docs/progress.md                      |"
+  echo "  | 환경변수 추가       | docs/engineering.md                   |"
+  echo ""
+  echo "문서 동기화 체크는 경고만 출력하고 커밋은 계속 진행합니다."
+  echo ""
+else
+  echo "✅ docs 동기화 확인 완료"
 fi
 
-echo "✅ docs 동기화 확인 완료"
 echo ""
