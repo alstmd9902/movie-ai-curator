@@ -124,6 +124,12 @@
 - 변경 파일 목록 확인
 - 템플릿 형식 그대로 PR 작성
 
+## Review guidelines
+
+PR 리뷰와 Codex GitHub 자동리뷰는 `docs/review-guidelines.md`를 따른다.
+
+@docs/review-guidelines.md
+
 ## 주석 규칙
 
 - 코드 자체로 의미가 명확하면 불필요한 주석을 달지 않는다.
