@@ -7,7 +7,7 @@
 - `/` 라우트 → `src/pages/MainPage.tsx`
 - `createBrowserRouter` 기반 라우터 → `src/routes/router.tsx`
 - 공통 레이아웃 → `src/components/layouts/RootLayout.tsx`
-- 임시 `Header`, `Footer`
+- 반응형 로고/내비게이션/검색/알림/모바일 사이드바/로그인 UI가 있는 `Header`, 임시 `Footer`
 - 전역 배경 `#050505`
 - 문서 구조 통합 → `docs/project.md`, `docs/engineering.md`
 

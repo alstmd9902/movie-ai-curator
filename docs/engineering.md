@@ -29,10 +29,17 @@ src/
   pages/
     MainPage.tsx
   components/
+    ui/
+      button-variants.ts
+      button.tsx
+      input.tsx
     layouts/
       Header.tsx
+      MobileHeader.tsx
       Footer.tsx
       RootLayout.tsx
+  lib/
+    utils.ts
   routes/
     router.tsx
 ```
@@ -103,6 +110,8 @@ Query key 예시:
 ## 디자인 기본 규칙
 
 - Tailwind 클래스 우선, 커스텀 CSS 최소화
+- Tailwind 수치는 기본 스케일을 우선한다. 임의 하드코딩 값(`h-[36px]`, `w-[280px]` 등)은 쓰지 않는다.
+- 가로/세로 값이 같으면 `h-9 w-9` 대신 `size-9`처럼 `size-*`를 사용한다.
 - `tailwind.config.js` 없음. Tailwind v4 설정은 `src/index.css`의 `@theme inline`에서 관리
 - 기본 폰트: Pretendard (`@fontsource/pretendard`)
 - 전역 배경: `#050505`
