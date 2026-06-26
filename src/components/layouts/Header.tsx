@@ -14,11 +14,14 @@ function SearchField({ id, onClose }: { id?: string; onClose?: () => void }) {
     <div className="relative">
       <Input
         id={id}
-        type="search"
+        type="text"
+        inputMode="search"
+        enterKeyHint="search"
         aria-label="영화, 배우, 장르 검색"
         value={keyword}
         variant="search"
         placeholder="영화, 배우, 장르 검색"
+        className="outline-none focus-visible:outline-none"
         onBlur={() => setIsFocused(false)}
         onChange={(event) => setKeyword(event.target.value)}
         onFocus={() => setIsFocused(true)}
