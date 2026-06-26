@@ -67,11 +67,14 @@ export default function MobileHeader() {
             <div className="relative">
               <Input
                 id="mobile-header-search"
-                type="search"
+                type="text"
+                inputMode="search"
+                enterKeyHint="search"
                 aria-label="영화, 배우, 장르 검색"
                 value={keyword}
                 variant="search"
                 placeholder="영화, 배우, 장르 검색"
+                className="outline-none focus-visible:outline-none"
                 onChange={(event) => setKeyword(event.target.value)}
               />
               <Button
