@@ -19,7 +19,7 @@ export default function MobileHeader() {
           aria-label="검색"
           aria-expanded={isSearchOpen}
           aria-controls="mobile-search-panel"
-          className="rounded-full bg-transparent p-1 text-white/85 hover:bg-transparent hover:text-white"
+          className="rounded-full bg-transparent p-1 text-pf-white/85 hover:bg-transparent hover:text-pf-white"
           onClick={() => {
             setIsSearchOpen((isOpen) => !isOpen);
             setIsMenuOpen(false);
@@ -32,10 +32,10 @@ export default function MobileHeader() {
           variant="ghost"
           size="icon"
           aria-label="알림"
-          className="relative rounded-full bg-transparent p-1 text-white/85 hover:bg-transparent hover:text-white"
+          className="relative rounded-full bg-transparent p-1 text-pf-white/85 hover:bg-transparent hover:text-pf-white"
         >
           <Bell className="size-6 sm:size-7" strokeWidth={2} />
-          <span className="absolute right-0 top-0 size-1.5 rounded-full bg-white/70" />
+          <span className="absolute right-0 top-0 size-1.5 rounded-full bg-pf-orange" />
         </Button>
         <Button
           type="button"
@@ -44,7 +44,7 @@ export default function MobileHeader() {
           aria-label="메뉴 열기"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-header-menu"
-          className="rounded-full bg-transparent p-1 text-white/85 hover:bg-transparent hover:text-white"
+          className="rounded-full bg-transparent p-1 text-pf-white/85 hover:bg-transparent hover:text-pf-white"
           onClick={() => {
             setIsMenuOpen((isOpen) => !isOpen);
             setIsSearchOpen(false);
@@ -61,7 +61,7 @@ export default function MobileHeader() {
       {isSearchOpen && (
         <div
           id="mobile-search-panel"
-          className="absolute left-0 top-20 w-full border-t border-white/5 bg-neutral-950 px-5 py-4 lg:hidden"
+          className="absolute left-0 top-20 w-full border-t border-pf-charcoal bg-pf-black px-5 py-4 lg:hidden"
         >
           <div className="mx-auto max-w-7xl">
             <div className="relative">
@@ -71,6 +71,7 @@ export default function MobileHeader() {
                 aria-label="영화, 배우, 장르 검색"
                 value={keyword}
                 variant="search"
+                className="border-pf-charcoal bg-pf-charcoal/50 text-pf-white placeholder:text-pf-gray/60 focus-visible:border-pf-orange/70 focus-visible:bg-pf-charcoal/70"
                 placeholder="영화, 배우, 장르 검색"
                 onChange={(event) => setKeyword(event.target.value)}
               />
@@ -79,7 +80,7 @@ export default function MobileHeader() {
                 variant="ghost"
                 size="icon"
                 aria-label={keyword ? '검색어 지우기' : '검색 취소'}
-                className="absolute right-3 top-1/2 size-7 -translate-y-1/2 rounded-full bg-transparent p-0 text-white/45 transition-colors hover:bg-transparent hover:text-white active:translate-y-0"
+                className="absolute right-3 top-1/2 size-7 -translate-y-1/2 rounded-full bg-transparent p-0 text-pf-gray transition-colors hover:bg-transparent hover:text-pf-white active:translate-y-0"
                 onPointerDown={(event) => event.preventDefault()}
                 onClick={() => {
                   if (keyword) {
@@ -98,7 +99,7 @@ export default function MobileHeader() {
       )}
 
       <div
-        className={`fixed inset-0 z-40 bg-black/55 transition-opacity lg:hidden ${
+        className={`fixed inset-0 z-40 bg-pf-black/70 transition-opacity lg:hidden ${
           isMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
         aria-hidden="true"
@@ -107,12 +108,12 @@ export default function MobileHeader() {
 
       <aside
         id="mobile-header-menu"
-        className={`fixed right-0 top-0 z-50 flex h-screen w-80 max-w-xs flex-col border-l border-white/10 bg-neutral-950 px-5 py-6 shadow-2xl shadow-black/50 transition-transform duration-300 lg:hidden ${
+        className={`fixed right-0 top-0 z-50 flex h-screen w-80 max-w-xs flex-col border-l border-pf-charcoal bg-pf-black px-5 py-6 shadow-2xl shadow-black/50 transition-transform duration-300 lg:hidden ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!isMenuOpen}
       >
-        <div className="flex items-center justify-between border-b border-white/10 pb-6">
+        <div className="flex items-center justify-between border-b border-pf-charcoal pb-6">
           <Link
             to="/"
             className="flex items-center gap-2.5"
@@ -124,7 +125,7 @@ export default function MobileHeader() {
               alt=""
               className="h-6 w-6 object-contain"
             />
-            <span className="text-base font-bold tracking-tight text-white">
+            <span className="text-base font-bold tracking-tight text-pf-white">
               PICK FLIX
             </span>
           </Link>
@@ -133,7 +134,7 @@ export default function MobileHeader() {
             variant="ghost"
             size="icon"
             aria-label="메뉴 닫기"
-            className="rounded-full bg-transparent p-1 text-white/85 hover:bg-transparent hover:text-white"
+            className="rounded-full bg-transparent p-1 text-pf-white/85 hover:bg-transparent hover:text-pf-white"
             onClick={() => setIsMenuOpen(false)}
           >
             <X className="size-7" strokeWidth={2.1} />
@@ -146,7 +147,7 @@ export default function MobileHeader() {
         >
           <Link
             to="/"
-            className="rounded-md px-1 py-3 text-left text-lg font-semibold text-amber-300"
+            className="rounded-md px-1 py-3 text-left text-lg font-semibold text-pf-orange"
             onClick={() => setIsMenuOpen(false)}
           >
             홈
@@ -154,17 +155,17 @@ export default function MobileHeader() {
           <Button
             type="button"
             variant="ghost"
-            className="h-auto justify-start rounded-md bg-transparent px-1 py-3 text-left text-lg font-medium text-white/75 hover:bg-transparent hover:text-white"
+            className="h-auto justify-start rounded-md bg-transparent px-1 py-3 text-left text-lg font-medium text-pf-gray hover:bg-transparent hover:text-pf-white"
           >
             개봉예정작
           </Button>
         </nav>
 
-        <div className="border-t border-white/10 pt-5">
+        <div className="border-t border-pf-charcoal pt-5">
           <Button
             type="button"
             variant="ghost"
-            className="h-auto w-full justify-start bg-transparent px-0 py-3 text-left text-lg font-medium text-white/80 hover:bg-transparent hover:text-white"
+            className="h-auto w-full justify-start bg-transparent px-0 py-3 text-left text-lg font-medium text-pf-gray hover:bg-transparent hover:text-pf-white"
           >
             로그인
           </Button>
