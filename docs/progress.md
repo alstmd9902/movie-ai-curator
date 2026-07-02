@@ -5,6 +5,7 @@
 ## 현재 구현
 
 - `/` 라우트 → `src/pages/MainPage.tsx`
+- 메인 페이지 히어로 배너 UI
 - `createBrowserRouter` 기반 라우터 → `src/routes/router.tsx`
 - 공통 레이아웃 → `src/components/layouts/RootLayout.tsx`
 - 반응형 로고/내비게이션/검색/알림/모바일 사이드바/로그인 UI가 있는 `Header`, 임시 `Footer`
