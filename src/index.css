@@ -3,6 +3,16 @@
 @import 'shadcn/tailwind.css';
 @import '@fontsource/pretendard';
 
+@theme {
+  --color-pf-orange: #ff6a00;
+  --color-pf-orange-deep: #ff3d00;
+  --color-pf-red: #d62828;
+  --color-pf-white: #f5f5f5;
+  --color-pf-gray: #a8a8a8;
+  --color-pf-charcoal: #2a2a2a;
+  --color-pf-black: #0d0d0d;
+}
+
 html,
 body {
   background: #050505;
